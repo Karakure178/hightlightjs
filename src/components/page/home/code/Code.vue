@@ -1,16 +1,14 @@
 <script setup>
 import { ref } from "vue";
 
-import CodeTab from "./tab/Tab.vue";
-import Tab from "./test/Tab.vue";
+import CodeTab from "./codetab/CodeTab.vue";
 </script>
 
 <template>
   <section ref="target" class="code">
     <div class="code__inner">
+      <h2 class="code__headline">Code</h2>
       <div class="code__container">
-        <h2 class="code__headline">Code</h2>
-        <Tab />
         <CodeTab />
       </div>
     </div>
