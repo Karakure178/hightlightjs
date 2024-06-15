@@ -25,7 +25,7 @@ useHead({
     <Exp />
   </main>
   <Footer />
-  <MovetopButton href="#top" />
+  <MovetopButton href="#" />
 </template>
 
 <style lang="scss" scoped></style>

@@ -30,6 +30,7 @@
     "destyle.css": "^4.0.0",
     "eslint": "^8.49.0",
     "eslint-plugin-import": "^2.29.1",
+    "eslint-import-resolver-alias": "^1.1.2",
     "eslint-plugin-vue": "^9.17.0",
     "highlight.js": "^11.9.0",
     "postcss": "^8.4.32",
