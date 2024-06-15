@@ -1,16 +1,15 @@
 <script setup>
 import { ref } from "vue";
+
+import Tab from "./test/Tab.vue";
 </script>
 
 <template>
   <section ref="target" class="code">
     <div class="code__inner">
-      <div>
+      <div class="code__container">
         <h2 class="code__headline">Code</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
+        <Tab />
       </div>
     </div>
   </section>
@@ -42,6 +41,9 @@ import { ref } from "vue";
   @include S-M {
     padding-top: 15px;
   }
+}
+
+.code__container {
 }
 
 .code__headline {

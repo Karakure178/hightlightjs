@@ -5,7 +5,7 @@ import Navigation from "./Navigation.vue";
 </script>
 
 <template>
-  <header class="header">
+  <header id="header" class="header">
     <div class="header__inner">
       <Logo />
       <Hamburger />
