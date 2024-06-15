@@ -10,6 +10,7 @@ export const mainData = {
     headline: "コードのハイライト",
     tabs: [
       {
+        value: "tab1",
         category: "vue",
         file: "Header.vue",
         code: `
@@ -67,7 +68,6 @@ import Navigation from "./Navigation.vue";
   }
 }
 </style>
-
         `,
       },
       {

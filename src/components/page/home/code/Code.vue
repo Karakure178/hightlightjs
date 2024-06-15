@@ -2,6 +2,10 @@
 import { ref } from "vue";
 
 import CodeTab from "./codetab/CodeTab.vue";
+
+const props = defineProps({
+  tabs: { type: Array, required: true },
+});
 </script>
 
 <template>
@@ -9,7 +13,7 @@ import CodeTab from "./codetab/CodeTab.vue";
     <div class="code__inner">
       <h2 class="code__headline">Code</h2>
       <div class="code__container">
-        <CodeTab />
+        <CodeTab :tabs="props.tabs" />
       </div>
     </div>
   </section>

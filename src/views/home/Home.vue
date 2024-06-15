@@ -1,7 +1,8 @@
 <script setup>
 import { useHead } from "unhead";
+import { ref } from "vue";
 
-import { headData } from "./data.js";
+import { headData, mainData } from "./data.js";
 
 import AnkerTransition from "@/components/common/animation/ankerTransition/AnkerTransition.vue";
 import Footer from "@/components/common/footer/Footer.vue";
@@ -14,13 +15,16 @@ useHead({
   meta: [{ property: "og:title", content: headData.title }],
   link: [{ rel: "stylesheet", href: headData.font }],
 });
+
+const tabs = ref(mainData.code.tabs);
+console.log(tabs.value, "tabs");
 </script>
 
 <template>
   <Header />
   <main>
     <AnkerTransition />
-    <Code />
+    <Code :tabs="tabs" />
     <Exp />
   </main>
   <Footer />
