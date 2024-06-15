@@ -66,5 +66,15 @@ onMounted(() => {
 </template>
 
 <style lang="scss" scoped>
-@use "./AnkerTransition.scss";
+.ankerTransition {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  width: 100vw;
+  height: 100vh;
+  background-color: $blackColor;
+  transform: scaleY(0);
+  transform-origin: 0 100vh;
+}
 </style>

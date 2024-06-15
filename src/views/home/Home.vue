@@ -1,16 +1,14 @@
 <script setup>
 import { useHead } from "unhead";
-import { ref } from "vue";
 
 import AnkerTransition from "./../../components/common/animation/ankerTransition/AnkerTransition.vue";
 import Footer from "./../../components/common/footer/Footer.vue";
 import Header from "./../../components/common/header/Header.vue";
-import About from "./../../components/page/top/about/About.vue";
-import Articles from "./../../components/page/top/articles/Articles.vue";
-import Introduction from "./../../components/page/top/introduction/Intro.vue";
-import Work from "./../../components/page/top/work/Work.vue";
 import MovetopButton from "./../../components/ui/button/movetop/MovetopButton.vue";
 import { headData } from "./data.js";
+
+import Code from "@/components/page/home/code/Code.vue";
+import Exp from "@/components/page/home/exp/Exp.vue";
 
 useHead({
   title: headData.title,
@@ -23,15 +21,11 @@ useHead({
   <Header />
   <main>
     <AnkerTransition />
-    <Introduction />
-    <About />
-    <Work />
-    <Articles />
+    <Code />
+    <Exp />
   </main>
   <Footer />
   <MovetopButton href="#top" />
 </template>
 
-<style lang="scss" scoped>
-@use "./Top.scss";
-</style>
+<style lang="scss" scoped></style>

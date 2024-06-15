@@ -23,5 +23,26 @@ export default defineComponent({
 </template>
 
 <style lang="scss" scoped>
-@use "./Logo.scss";
+// ===========================================
+// ロゴ設定
+// ===========================================
+.header__logo {
+  position: absolute;
+  top: 50%;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  transform: translateY(-50%);
+
+  @include L-XL {
+    width: 60px;
+  }
+
+  @include S-M {
+    width: 29px;
+  }
+
+  img {
+    width: 100%;
+  }
+}
 </style>

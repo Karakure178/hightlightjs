@@ -13,7 +13,6 @@ const movetoClick = () => {
   const moveTo = new MoveTo();
   const target = document.querySelector(classList.href);
   moveTo.move(target);
-  //console.log("movetoClick");
 };
 
 onMounted(() => {
@@ -53,5 +52,51 @@ onMounted(() => {
 </template>
 
 <style lang="scss" scoped>
-@use "./MovetopButton.scss";
+@use "../../../../assets/scss/configs/index" as *;
+
+.movetopButton {
+  position: fixed;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  visibility: hidden;
+  background-color: $whiteColor;
+  border: 2px solid $blackColor;
+  border-radius: 8px;
+  opacity: 0;
+  transition:
+    opacity 0.3s ease-out,
+    visibility 0.3s ease-out 0s;
+
+  @include L-XL {
+    right: 100px;
+    bottom: 150px;
+  }
+
+  @include S-M {
+    right: 20px;
+    bottom: 100px;
+  }
+
+  &.is-active {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  img {
+    width: 80%;
+    height: auto;
+  }
+
+  @include hover-and-active {
+    background-color: $blackColor;
+
+    img {
+      filter: invert(100%);
+    }
+  }
+}
 </style>

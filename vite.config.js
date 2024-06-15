@@ -16,4 +16,11 @@ export default defineConfig({
     host: true,
     port: 3001,
   },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@use "@/assets/scss/configs/_index.scss" as *;`,
+      },
+    },
+  },
 });
