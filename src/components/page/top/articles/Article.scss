@@ -1,0 +1,93 @@
+@use "../../../../assets/scss/configs/index" as *;
+
+// -------------------------------------------
+// 記事一覧
+// -------------------------------------------
+
+.articlesList__item {
+  @include L-XL {
+    margin-bottom: 10px;
+  }
+
+  @include S-M {
+    margin-bottom: 20px;
+  }
+
+  &:last-child {
+    @include L-XL {
+      margin-bottom: 0;
+    }
+
+    @include S-M {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.articlesList__link {
+  border: solid 1px $blackColor;
+  border-radius: 4px;
+  transition: box-shadow 0.3s ease-in-out;
+
+  @include L-XL {
+    display: flex;
+    padding-top: 23px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+  }
+
+  @include S-M {
+    display: flex;
+    padding-top: 23px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+  }
+
+  @include hover-and-active {
+    box-shadow: 10px 5px 0 0 #777;
+  }
+
+  img {
+    @include L-XL {
+      width: 24px;
+      height: 100%;
+    }
+
+    @include S-M {
+      width: 24px;
+      height: 100%;
+    }
+  }
+}
+
+.articlesList__group {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.articlesList__title,
+.articlesList__date {
+  font-family: $baseFont;
+}
+
+.articlesList__title {
+  font-weight: 700;
+  color: $blackColor;
+
+  @include L-XL {
+    font-size: 16px;
+  }
+}
+
+.articlesList__date {
+  font-weight: 400;
+  color: #6b7280;
+
+  @include L-XL {
+    padding-top: 12px;
+    font-size: 14px;
+  }
+}
