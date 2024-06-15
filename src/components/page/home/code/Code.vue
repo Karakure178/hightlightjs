@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from "vue";
 
+import CodeTab from "./tab/Tab.vue";
 import Tab from "./test/Tab.vue";
 </script>
 
@@ -10,6 +11,7 @@ import Tab from "./test/Tab.vue";
       <div class="code__container">
         <h2 class="code__headline">Code</h2>
         <Tab />
+        <CodeTab />
       </div>
     </div>
   </section>
